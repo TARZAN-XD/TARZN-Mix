@@ -1,35 +1,79 @@
-<!DOCTYPE html>
-<html lang="ar">
+<!DOCTYPE html><html lang="ar">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🚀 استضافة مواقعك</title>
   <style>
+    * {
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
     body {
-      background: #111;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
       color: white;
-      font-family: sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 50px;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
     }
-    h1 { color: #0ff; }
+    h1 {
+      color: #0ff;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
     form {
       background: #222;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px #0ff4;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+      width: 90%;
+      max-width: 400px;
     }
-    input, button {
-      padding: 10px;
-      margin: 10px;
-      border-radius: 8px;
+    input[type="file"] {
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
       border: none;
+      width: 100%;
     }
     button {
+      padding: 12px 20px;
       background: #0cf;
       color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
       cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background: #09a;
+    }
+    a {
+      color: #0cf;
+      margin-top: 20px;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.8rem;
+      color: #777;
     }
   </style>
 </head>
@@ -40,7 +84,9 @@
     <br>
     <button type="submit">🔼 رفع الملفات</button>
   </form>
-  <br>
-  <a href="/sites" style="color: #0cf;">📂 عرض المواقع المرفوعة</a>
+  <a href="/sites">📂 عرض المواقع المرفوعة</a>
+  <footer>
+    تم التطوير بواسطة ❤️ <strong>طرزان الواقدي</strong> - جميع الحقوق محفوظة 2025
+  </footer>
 </body>
 </html>
